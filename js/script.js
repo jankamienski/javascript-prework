@@ -32,18 +32,14 @@ if (playerInput == '1') {
 printMessage('Twój ruch to: ' + playerMove);
 
 
-if ((computerMove == 'kamień' && playerMove == 'papier')
-    || (computerMove == 'papier' && playerMove == 'nożyce') 
-    || (computerMove == 'nożyce' && playerMove == 'kamień')) {
+if ((computerMove == 'kamień' && playerMove == 'papier') || 
+    (computerMove == 'papier' && playerMove == 'nożyce') || 
+    (computerMove == 'nożyce' && playerMove == 'kamień')) {
     printMessage('Ty wygrywasz!');
-} else if ((computerMove == 'papier' && playerMove == 'kamień') 
-    || (computerMove == 'nożyce' && playerMove == 'papier')
-    || (computerMove == 'kamień' && playerMove == 'nożyce')) {
-    printMessage('Komputer wygrywa!');
-} else if ((computerMove == 'kamień' && playerMove == 'kamień') 
-    || (computerMove == 'papier' && playerMove == 'papier') 
-    || (computerMove == 'nożyce' && playerMove == 'nożyce')) {
+} else if (playerMove === computerMove) {
     printMessage('Remis!');
-} else  {
+} else if (playerMove === 'nieznany ruch') {
     printMessage('Błędna cyfra! Podaj 1, 2 lub 3');
+} else {
+    printMessage('Komputer wygrywa!');
 }
