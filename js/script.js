@@ -15,7 +15,7 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let argComputerMove = getMoveName(randomNumber);
-printMessage('Mój ruch to: ' + ArgComputerMove);
+printMessage('Mój ruch to: ' + argComputerMove);
 
 /*if (randomNumber == 1) {
     computerMove = 'kamień';
@@ -54,3 +54,4 @@ if ((argComputerMove== 'kamień' && argPlayerMove == 'papier') ||
     printMessage('Komputer wygrywa!');
 }
 console.log(getMoveName('2'));
+}
