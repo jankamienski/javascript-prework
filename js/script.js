@@ -1,3 +1,6 @@
+//function playGame(playerInput) {
+    
+
 function getMoveName(randomNumber) {
     if (randomNumber == 1) {
       return 'kamień';
@@ -19,16 +22,16 @@ let argComputerMove = getMoveName(randomNumber);
 //printMessage('Mój ruch to: ' + argComputerMove);
 
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-let argPlayerMove = playerInput;  //nie wiem czy to dobra dekalracja...
-console.log('Gracz wpisał: ' + playerInput);
+let argPlayerMove = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');  //do zakomentowania
+//let argPlayerMove = playerInput;  //nie wiem czy to dobra dekalracja...
+console.log('Gracz wpisał: ' + argPlayerMove);
   
 
-  if (playerInput == '1') {
+  if (argPlayerMove == '1') {
     argPlayerMove = 'kamień';
-} else if (playerInput == "2") {
+} else if (argPlayerMove == "2") {
     argPlayerMove = 'papier';
-} else if (playerInput == "3") {
+} else if (argPlayerMove == "3") {
     argPlayerMove = 'nożyce';
 } else {
     argPlayerMove = "nieznany ruch";
@@ -53,3 +56,15 @@ if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
 }
 console.log(getMoveName('2'));
 }
+
+
+
+
+//let rock = document.getElementById('rock');
+//let paper = document.getElementById('paper');
+//let scissors = document.getElementById('scissors');
+
+//rock.addEventListener('click', printMessage ('blabla'));
+
+//}
+//playGame(3);
