@@ -16,13 +16,14 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let argComputerMove = getMoveName(randomNumber);
-printMessage('Mój ruch to: ' + argComputerMove);
+//printMessage('Mój ruch to: ' + argComputerMove);
 
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 let argPlayerMove = playerInput;  //nie wiem czy to dobra dekalracja...
 console.log('Gracz wpisał: ' + playerInput);
   
+
   if (playerInput == '1') {
     argPlayerMove = 'kamień';
 } else if (playerInput == "2") {
@@ -30,20 +31,22 @@ console.log('Gracz wpisał: ' + playerInput);
 } else if (playerInput == "3") {
     argPlayerMove = 'nożyce';
 } else {
-    printMessage('Błędna cyfra! Podaj 1, 2 lub 3');
+    argPlayerMove = "nieznany ruch";
+    //printMessage('Błędna cyfra! Podaj 1, 2 lub 3');
 }
-printMessage('Twój ruch to: ' + argPlayerMove);
+//printMessage('Twój ruch to: ' + argPlayerMove);
 
+displayResult(argComputerMove, argPlayerMove);
 
 function displayResult(argComputerMove, argPlayerMove){
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-if ((argComputerMove== 'kamień' && argPlayerMove == 'papier') || 
+if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') || 
     (argComputerMove == 'papier' && argPlayerMove == 'nożyce') || 
     (argComputerMove == 'nożyce' && argPlayerMove == 'kamień')) {
     printMessage('Ty wygrywasz!');
-} else if (argComputerMove=== cargPlayerMove) {
+} else if (argComputerMove == argPlayerMove) {
     printMessage('Remis!');
-} else if (cargPlayerMove === 'nieznany ruch') {
+} else if (argPlayerMove == 'nieznany ruch') {
     printMessage('Błędna cyfra! Podaj 1, 2 lub 3');
 } else {
     printMessage('Komputer wygrywa!');
