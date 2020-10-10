@@ -60,19 +60,18 @@ console.log(getMoveName('2'));
 function rockClicked() {
     playGame(1)
   }
-  function paperClicked() {
+function paperClicked() {
     playGame(2)
   }
-  function scissorsClicked() {
+function scissorsClicked() {
     playGame(3)
   }
-
+}
 
 let buttonRock = document.getElementById('button-rock');
 let buttonPaper = document.getElementById('button-paper');
 let buttonScissors = document.getElementById('button-scissors');
 
-buttonrock.addEventListener('click', rockClicked);
-buttonpaper.addEventListener('click', paperClicked);
-buttonscissors.addEventListener('click', scissorsClicked);
-}
+buttonRock.addEventListener('click', rockClicked);
+buttonPaper.addEventListener('click', paperClicked);
+buttonScissors.addEventListener('click', scissorsClicked);
