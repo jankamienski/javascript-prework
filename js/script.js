@@ -56,17 +56,18 @@ if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
 }
 console.log(getMoveName('2'));
 }
+}
 
 function rockClicked() {
-    playGame(1)
-  }
-function paperClicked() {
-    playGame(2)
-  }
-function scissorsClicked() {
-    playGame(3)
-  }
+  playGame(1)
 }
+function paperClicked() {
+  playGame(2)
+}
+function scissorsClicked() {
+  playGame(3)
+}
+
 
 let buttonRock = document.getElementById('button-rock');
 let buttonPaper = document.getElementById('button-paper');
