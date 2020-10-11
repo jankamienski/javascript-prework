@@ -1,3 +1,4 @@
+{
 function playGame(argPlayerMove) {
     clearMessages()
 
@@ -15,15 +16,11 @@ function getMoveName(randomNumber) {
   }
 
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+const randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let argComputerMove = getMoveName(randomNumber);
-//printMessage('Mój ruch to: ' + argComputerMove);
+const argComputerMove = getMoveName(randomNumber);
 
-
-//let argPlayerMove = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');  
-//let argPlayerMove = playerInput;  //nie wiem czy to dobra dekalracja...
 console.log('Gracz wpisał: ' + argPlayerMove);
   
 
@@ -35,9 +32,7 @@ console.log('Gracz wpisał: ' + argPlayerMove);
     argPlayerMove = 'nożyce';
 } else {
     argPlayerMove = "nieznany ruch";
-    //printMessage('Błędna cyfra! Podaj 1, 2 lub 3');
 }
-//printMessage('Twój ruch to: ' + argPlayerMove);
 
 displayResult(argComputerMove, argPlayerMove);
 
@@ -58,6 +53,7 @@ console.log(getMoveName('2'));
 }
 }
 
+{
 function rockClicked() {
   playGame(1)
 }
@@ -69,10 +65,12 @@ function scissorsClicked() {
 }
 
 
-let buttonRock = document.getElementById('button-rock');
-let buttonPaper = document.getElementById('button-paper');
-let buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 buttonRock.addEventListener('click', rockClicked);
 buttonPaper.addEventListener('click', paperClicked);
 buttonScissors.addEventListener('click', scissorsClicked);
+}
+}
